@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttersupabase240902/screens/splash_screen.dart';
+import 'package:fluttersupabase240902/services/attendance_service.dart';
 import 'package:fluttersupabase240902/services/auth_service.dart';
 import 'package:fluttersupabase240902/services/db_service.dart';
 import 'package:provider/provider.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => AuthService()),
         ChangeNotifierProvider(create: (context) => DbService()),
+        ChangeNotifierProvider(create: (context) => AttendanceService()),
       ],
       child: MaterialApp(
         theme: ThemeData(

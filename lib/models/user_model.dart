@@ -19,7 +19,7 @@ class UserModel {
       email: data['email'],
       name: data['name'],
       department: data['department'],
-      employeeId: data['employeeId'],
+      employeeId: data['employee_id'], // 뒷 부분에 있는 예시)employee_id  부분이 supabase에 있는 column과 같은 이름이어야한다.
     );
   }
 }
